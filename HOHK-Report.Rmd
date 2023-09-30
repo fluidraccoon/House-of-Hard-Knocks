@@ -124,6 +124,8 @@ df_KTC_fantasy_join <- df_KTC_fantasy %>%
                             Player=='Olabisi Johnson' ~ 'Bisi Johnson',
                             Player=='Kyle Phillips' ~ 'Kyle Philips',
                             Player=='Lamical Perine' ~ "La'Mical Perine",
+                            Player=='Devon Achane' ~ "De'Von Achane",
+                            Player=='Nathaniel Dell' ~ 'Tank Dell',
                             T ~ Player)) %>% 
   left_join(player_data[,c('full_name','team','position','player_id')], by=c('Player'='full_name', 'Position'='position', 'Team'='team'))
 
